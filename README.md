@@ -14,7 +14,15 @@ The dataset used in this project is `Ads_CTR_Optimisation.csv`, which simulates 
 
 This binary feedback forms the basis for the reinforcement learning algorithm to make smarter decisions over time.
 
----
+
+## 📁 Repository Structure
+
+- `apriori_analysis.py` – Main script implementing UCB algorithm
+- ` Ads_CTR_Optimisation.csv` – Simulated dataset of ad click responses
+- `README.md` – Project overview and setup instructions
+- `CONTRIBUTING.md` – Guidelines for contributors
+- `requirements.txt` # Python dependencies
+
 
 ## 🚀 Getting Started
 
@@ -34,7 +42,10 @@ pip install -r requirements.txt
 Or install individually:
 
 ```bash
-pip install apyori pandas matplotlib numpy
+import numpy as np 
+import matplotlib.pyplot as plt
+import pandas as pd
+import math
 ```
 
 ### 3. 🚀 How to Run
@@ -47,21 +58,42 @@ python upper_confidence_bound.py
 
 ---
 
-## 📁 Repository Structure
 
-- `apriori_analysis.py` – Main script implementing UCB algorithm
-- ` Ads_CTR_Optimisation.csv` – Simulated dataset of ad click responses
-- `README.md` – Project overview and setup instructions
-- `CONTRIBUTING.md` – Guidelines for contributors
-- `requirements.txt` # Python dependencies
 
----
+## 📈 Output
+
+The script will output:
+
+- A visual histogram showing how many times each ad was selected
+
+- Printed results for total reward (number of clicks)
+
+- Insights on which ad performed best over time
+
+
+## ⚙️ Details
+
+- Algorithm: Upper Confidence Bound (UCB)
+
+- Problem: Multi-Armed Bandit
+
+- Distance Metric: Based on average reward and confidence interval:
+
+## 🧠 Understanding
+
+The UCB algorithm intelligently balances:
+
+- Exploration: Selecting ads not shown often to gather more data.
+
+- Exploitation: Selecting ads that have historically high click rates.
+
+- Over time, this leads to improved ad selection decisions that maximize overall CTR.
+
 
 ## 📜 License
 
 This project is licensed under the MIT License.
 
----
 
 ## 🤝 Contributions
 
