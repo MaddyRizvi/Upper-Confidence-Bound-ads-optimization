@@ -42,7 +42,7 @@ pip install apyori pandas matplotlib numpy
 Make sure your dataset is in the correct format, then run:
 
 ```bash
-python upper_confidence-bound.py
+python upper_confidence_bound.py
 ```
 
 ---
